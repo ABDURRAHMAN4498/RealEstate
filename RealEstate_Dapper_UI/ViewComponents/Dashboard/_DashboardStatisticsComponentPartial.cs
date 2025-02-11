@@ -40,7 +40,7 @@ namespace RealEstate_Dapper_UI.ViewComponents.Dashboard
             var clientAvarageProductPriceByRent = _httpClientFactory.CreateClient();
             var responseMessageAvarageProductPriceByRent = await clientAvarageProductPriceByRent.GetAsync(PublicValues.Url + "Statistic/AvarageProductPriceByRent");
             var jsonDataAvarageProductPriceByRent = await responseMessageAvarageProductPriceByRent.Content.ReadAsStringAsync();
-            ViewBag.AvarageProductPriceByRent = float.Parse(jsonDataAvarageProductPriceByRent).ToString("0.00") ;
+            ViewBag.AvarageProductPriceByRent = float.Parse(jsonDataAvarageProductPriceByRent).ToString("#.00") ;
             #endregion
             return View();
         }

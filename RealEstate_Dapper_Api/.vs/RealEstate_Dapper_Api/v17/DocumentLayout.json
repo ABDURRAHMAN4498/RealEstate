@@ -1,12 +1,88 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\STH\\Desktop\\ASPNETCORE\\RealEstate\\RealEstate_Dapper_Api\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\productrepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\productrepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProductRepository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
+              "RelativeToolTip": "Repositories\\ProductRepository\\ProductRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCQAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:09:50.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProductRepository\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
+              "RelativeToolTip": "Repositories\\ProductRepository\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:08:58.882Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwCoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T14:08:50.195Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-11T12:22:52.021Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

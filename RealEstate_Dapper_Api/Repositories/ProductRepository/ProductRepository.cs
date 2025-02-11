@@ -32,6 +32,16 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
             }
         }
 
+        public async Task<List<ResultProductDto>> GetLast5ProductAsync()
+        {
+            string query = "select top(5) * from Product order by ProductId desc";
+            using (var connection = _context.CreaConnection())
+            {
+                var values = await connection.QueryAsync<ResultProductDto>(query);
+                return values.ToList();
+            }
+        }
+
         public void ProductDealOfTheDayChangeToFalse(int id)
         {
             string query = $"Update Product set DealOfTheDay='False' Where ProductId = {id}";

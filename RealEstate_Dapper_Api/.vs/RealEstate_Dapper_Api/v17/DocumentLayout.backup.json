@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\contactrepositories\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\contactrepositories\\contactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\dtos\\contactdtos\\resultcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:dtos\\contactdtos\\resultcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\productrepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\productrepository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\dtos\\contactdtos\\last4contactresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:dtos\\contactdtos\\last4contactresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\dtos\\contactdtos\\createcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:dtos\\contactdtos\\createcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\dtos\\contactdtos\\getbyidcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:dtos\\contactdtos\\getbyidcontactdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\employeerepositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\employeerepositories\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\contactrepositories\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\contactrepositories\\icontactrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\asp.net core\\realestate\\realestate_dapper_api\\repositories\\employeerepositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\employeerepositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +50,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProductRepository\\ProductRepository.cs",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
-              "RelativeToolTip": "Repositories\\ProductRepository\\ProductRepository.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowCQAAABQAAAAAAAAAA==",
+              "Title": "ResultContactDto.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\ResultContactDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ContactDtos\\ResultContactDto.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\ResultContactDto.cs",
+              "RelativeToolTip": "Dtos\\ContactDtos\\ResultContactDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T14:09:50.508Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IProductRepository.cs",
-              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProductRepository\\IProductRepository.cs",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
-              "RelativeToolTip": "Repositories\\ProductRepository\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T14:08:58.882Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwCoAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T14:08:50.195Z",
+              "WhenOpened": "2025-02-12T13:31:44.358Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-11T12:22:52.021Z",
+              "Title": "CreateContactDto.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\CreateContactDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ContactDtos\\CreateContactDto.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\CreateContactDto.cs",
+              "RelativeToolTip": "Dtos\\ContactDtos\\CreateContactDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:31:52.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Last4ContactResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\Last4ContactResultDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ContactDtos\\Last4ContactResultDto.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\Last4ContactResultDto.cs",
+              "RelativeToolTip": "Dtos\\ContactDtos\\Last4ContactResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:31:44.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetByIDContactDto.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\GetByIDContactDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ContactDtos\\GetByIDContactDto.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ContactDtos\\GetByIDContactDto.cs",
+              "RelativeToolTip": "Dtos\\ContactDtos\\GetByIDContactDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:31:42.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:27:28.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "Controllers\\ContactController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:26:23.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IEmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\EmployeeRepositories\\IEmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\EmployeeRepositories\\IEmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\EmployeeRepositories\\IEmployeeRepository.cs",
+              "RelativeToolTip": "Repositories\\EmployeeRepositories\\IEmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:03:00.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\EmployeeRepositories\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\EmployeeRepositories\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\EmployeeRepositories\\EmployeeRepository.cs",
+              "RelativeToolTip": "Repositories\\EmployeeRepositories\\EmployeeRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T13:00:27.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ContactRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ContactRepositories\\ContactRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ContactRepositories\\ContactRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ContactRepositories\\ContactRepository.cs",
+              "RelativeToolTip": "Repositories\\ContactRepositories\\ContactRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:50:52.984Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IContactRepository.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ContactRepositories\\IContactRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ContactRepositories\\IContactRepository.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\Asp.net Core\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ContactRepositories\\IContactRepository.cs",
+              "RelativeToolTip": "Repositories\\ContactRepositories\\IContactRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:50:37.694Z",
               "EditorCaption": ""
             }
           ]

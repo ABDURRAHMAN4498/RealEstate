@@ -715,3 +715,6 @@ C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_UI\obj\De
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\libman.json
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\libman.json
+C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

@@ -6,7 +6,7 @@
 <h1>Index</h1>
 
 <script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>
-@section Scripts{
+@section Scripts {
     <div class="content">
         <div class="container-fluid">
             <div class="row">
@@ -19,8 +19,18 @@
 
                                 connection.start().then(() => {
                                     $("#connstatus").text(connection.state);
+                                    setInterval(() => {
+                                        connection.invoke("SendCategoryCount");
+                                    }, 1000);
+
                                 }).catch((err) => { console.log(err) });
+
+                                connection.on("ReceiveCategoryCount", (value) => {
+                                    $("#categorycount").text(value);
+                                });
                             })
+
+
                         </script>
                     </div>
                 </div>
@@ -29,9 +39,14 @@
     </div>
 }
 <div class="row">
-    <div class="col-md-8 offset-2" >
+    <div class="col-md-8 offset-2">
         <div class="alert alert-warning">
             Bağlantı Durumu: <strong id="connstatus"></strong>
+        </div>
+    </div>
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-primary">
+            Kategory Sayısı: <strong id="categorycount"></strong>
         </div>
     </div>
 </div>

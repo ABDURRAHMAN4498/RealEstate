@@ -17,7 +17,7 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpGet]
         public async Task<IActionResult> ProductList()
         {
-            var values = await _productRepository.GetAllCategoryAsync();
+            var values = await _productRepository.GetAllProductAsync();
             return Ok(values);
         }
         [HttpGet("ProductListWithCategory")]
@@ -40,6 +40,12 @@ namespace RealEstate_Dapper_Api.Controllers
         public async Task<IActionResult> Last5ProductList()
         {
             var values = await _productRepository.GetLast5ProductAsync();
+            return Ok(values);
+        }
+        [HttpGet("ProductAdvertsListByEmployee")]
+        public async Task<IActionResult> ProductAdvertsList(int id)
+        {
+            var values = await _productRepository.GetProductAdvertsListByEmployeeAsync(id);
             return Ok(values);
         }
     }

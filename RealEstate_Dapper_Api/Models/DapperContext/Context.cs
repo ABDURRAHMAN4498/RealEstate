@@ -11,7 +11,7 @@ namespace RealEstate_Dapper_Api.Models.DapperContext
         public Context(IConfiguration configuration)
         {
             _configuration = configuration;
-            _connectionString = _configuration.GetConnectionString("home");
+            _connectionString = _configuration.GetConnectionString("connection")!;
         }
         public IDbConnection CreaConnection() => new SqlConnection(_connectionString);
     }

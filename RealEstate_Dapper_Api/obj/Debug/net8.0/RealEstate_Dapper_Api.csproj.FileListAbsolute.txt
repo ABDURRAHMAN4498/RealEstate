@@ -280,3 +280,6 @@ C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_Api\obj\D
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_Api\obj\Debug\net8.0\RealEstate_Dapper_Api.pdb
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_Api\obj\Debug\net8.0\RealEstate_Dapper_Api.genruntimeconfig.cache
 C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_Api\obj\Debug\net8.0\ref\RealEstate_Dapper_Api.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_Api\bin\Debug\net8.0\RealEstate_Dapper_Api.staticwebassets.endpoints.json
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_Api\obj\Debug\net8.0\staticwebassets\msbuild.RealEstate_Dapper_Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

@@ -718,3 +718,18 @@ C:\Users\Abdurrahman\Desktop\Asp.net core\RealEstate\RealEstate_Dapper_UI\bin\De
 C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\libman.json
 C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\STH\Desktop\Asp.net Core\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\libman.json
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\RealEstate_Dapper_UI.staticwebassets.endpoints.json
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\obj\Debug\net8.0\staticwebassets\msbuild.RealEstate_Dapper_UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\STH\Desktop\AspNetCore\RealEstate\RealEstate_Dapper_UI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll

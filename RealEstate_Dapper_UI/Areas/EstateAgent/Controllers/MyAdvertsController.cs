@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.ProductDtos;
+using RealEstate_Dapper_UI.Services;
 using RealEstate_Dapper_UI.StaticValues;
 
 namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
@@ -9,17 +10,18 @@ namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
     public class MyAdvertsController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public MyAdvertsController(IHttpClientFactory httpClientFactory)
+        private readonly ILoginService _loginService;
+        public MyAdvertsController(IHttpClientFactory httpClientFactory, ILoginService loginService)
         {
             _httpClientFactory = httpClientFactory;
+            _loginService = loginService;
         }
 
-        public async Task<IActionResult> Index(int id)
+        public async Task<IActionResult> Index()
         {
-            id=1;
+        
             var client = _httpClientFactory.CreateClient();
-            var responsemassage = await client.GetAsync(PublicValues.Url + $"Products/ProductAdvertsListByEmployee?id={id}");
+            var responsemassage = await client.GetAsync(PublicValues.Url + $"Products/ProductAdvertsListByEmployee?id={_loginService.GetUserId}");
             if (responsemassage.IsSuccessStatusCode)
             {
                 var jsonData = await responsemassage.Content.ReadAsStringAsync();
@@ -28,6 +30,6 @@ namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
             }
             return View();
         }
-        
+
     }
 }

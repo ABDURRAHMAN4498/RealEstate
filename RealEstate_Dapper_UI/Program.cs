@@ -1,7 +1,9 @@
+using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RealEstate_Dapper_UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
-
+JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
 // Add services to the container.
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
@@ -16,6 +18,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
     opt.Cookie.Name = "RealEstateJwt";
 
 });
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ILoginService,LoginService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -35,7 +39,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=PopularLocations}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Index}/{id?}");
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(

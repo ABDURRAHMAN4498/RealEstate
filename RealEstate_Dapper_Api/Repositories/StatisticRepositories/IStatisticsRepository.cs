@@ -1,6 +1,6 @@
 namespace RealEstate_Dapper_Api.Repositories.StatisticRepositories
 {
-    public interface IStatisticRepository
+    public interface IStatisticsRepository
     {
         int CategoryCount();
         int ActiveCategoryCount();

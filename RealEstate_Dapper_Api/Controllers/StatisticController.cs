@@ -7,9 +7,9 @@ namespace RealEstate_Dapper_Api.Controllers
     [ApiController]
     public class StatisticController : ControllerBase
     {
-        private readonly IStatisticRepository _statisticRepository;
+        private readonly IStatisticsRepository _statisticRepository;
 
-        public StatisticController(IStatisticRepository statisticRepository)
+        public StatisticController(IStatisticsRepository statisticRepository)
         {
             _statisticRepository = statisticRepository;
         }

@@ -3,11 +3,11 @@ using RealEstate_Dapper_Api.Models.DapperContext;
 
 namespace RealEstate_Dapper_Api.Repositories.StatisticRepositories
 {
-    public class StatisticRepository : IStatisticRepository
+    public class StatisticsRepository : IStatisticsRepository
     {
         private readonly Context _context;
 
-        public StatisticRepository(Context context)
+        public StatisticsRepository(Context context)
         {
             _context = context;
         }

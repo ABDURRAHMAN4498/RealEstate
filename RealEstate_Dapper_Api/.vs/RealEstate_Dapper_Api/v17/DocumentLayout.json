@@ -42,8 +42,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAAACMAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T22:02:57.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T22:02:57.238Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "Controllers\\EstateAgentLastProductsController.cs",
               "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\EstateAgentLastProductsController.cs",
               "RelativeToolTip": "Controllers\\EstateAgentLastProductsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-21T21:45:54.215Z",
               "EditorCaption": ""
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Repositories\\ProductRepository\\ProductRepository.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAYwCkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T21:40:23.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T21:40:23.65Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Repositories\\EstateAgentRepositories\\DashboardRepositories\\LastProductsRepoository\\Last5ProductsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T21:37:35.794Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T21:37:35.794Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Repositories\\EstateAgentRepositories\\DashboardRepositories\\LastProductsRepoository\\ILast5ProductsRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-21T21:37:08.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-21T21:37:08.154Z"
             }
           ]
         }

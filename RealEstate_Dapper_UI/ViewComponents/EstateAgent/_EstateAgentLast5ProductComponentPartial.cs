@@ -7,12 +7,12 @@ using RealEstate_Dapper_UI.StaticValues;
 
 namespace RealEstate_Dapper_UI.ViewComponents.EstateAgent
 {
-    public class _EstateAgentLastProductComponentPartial : ViewComponent
+    public class _EstateAgentLast5ProductComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly ILoginService _loginService;
 
-        public _EstateAgentLastProductComponentPartial(IHttpClientFactory httpClientFactory, ILoginService loginService)
+        public _EstateAgentLast5ProductComponentPartial(IHttpClientFactory httpClientFactory, ILoginService loginService)
         {
             _httpClientFactory = httpClientFactory;
             _loginService = loginService;

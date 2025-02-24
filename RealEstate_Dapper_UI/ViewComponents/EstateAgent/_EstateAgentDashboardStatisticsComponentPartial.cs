@@ -46,7 +46,7 @@ namespace RealEstate_Dapper_UI.ViewComponents.EstateAgent
             var responseMessageProductCountByStatusFalse = await clientProductCountByStatusFalse.GetAsync(PublicValues.Url +
              $"EstateAgentDashboardStatistic/ProductCountByStatusFalse?id={id}");
             var jsonDataProductCountByStatusFalse = await responseMessageProductCountByStatusFalse.Content.ReadAsStringAsync();
-            ViewBag.ProductCountByStatusFalse = float.Parse(jsonDataProductCountByStatusFalse).ToString("#.00") ;
+            ViewBag.ProductCountByStatusFalse = int.Parse(jsonDataProductCountByStatusFalse);
             #endregion
             return View();
         }

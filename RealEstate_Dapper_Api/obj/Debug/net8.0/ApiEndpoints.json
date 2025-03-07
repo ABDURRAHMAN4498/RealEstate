@@ -232,6 +232,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RealEstate_Dapper_Api.Controllers.EstateAgentChartController",
+    "Method": "Get5CityForChart",
+    "RelativePath": "api/EstateAgentChart/Get5CityForChart",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RealEstate_Dapper_Api.Controllers.EstateAgentDashboardStatisticController",
     "Method": "AllProductCount",
     "RelativePath": "api/EstateAgentDashboardStatistic/AllProductCount",
@@ -290,6 +300,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "RealEstate_Dapper_Api.Controllers.EstateAgentLastProductsController",
+    "Method": "GetLast5ProductAsync",
+    "RelativePath": "api/EstateAgentLastProducts/GetLast5ProductAsync",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "RealEstate_Dapper_Api.Controllers.LoginController",
     "Method": "SignIn",
     "RelativePath": "api/Login/SignIn",
@@ -301,6 +327,22 @@
         "Name": "createLoginDto",
         "Type": "RealEstate_Dapper_Api.Dtos.LoginDtos.CreateLoginDto",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealEstate_Dapper_Api.Controllers.MessagesController",
+    "Method": "GetInBoxmessageListByReceiver",
+    "RelativePath": "api/Messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

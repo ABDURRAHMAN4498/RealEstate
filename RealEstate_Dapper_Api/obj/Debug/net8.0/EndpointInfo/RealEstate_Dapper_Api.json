@@ -359,6 +359,18 @@
         }
       }
     },
+    "/api/EstateAgentChart/Get5CityForChart": {
+      "get": {
+        "tags": [
+          "EstateAgentChart"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/EstateAgentDashboardStatistic/ProductCountByEmployeeId": {
       "get": {
         "tags": [
@@ -437,6 +449,28 @@
         }
       }
     },
+    "/api/EstateAgentLastProducts/GetLast5ProductAsync": {
+      "get": {
+        "tags": [
+          "EstateAgentLastProducts"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
     "/api/Login/SignIn": {
       "post": {
         "tags": [
@@ -461,6 +495,28 @@
             }
           }
         },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Messages": {
+      "get": {
+        "tags": [
+          "Messages"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Success"

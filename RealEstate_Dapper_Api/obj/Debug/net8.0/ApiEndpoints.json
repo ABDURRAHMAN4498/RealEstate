@@ -443,8 +443,24 @@
   },
   {
     "ContainingType": "RealEstate_Dapper_Api.Controllers.ProductsController",
-    "Method": "ProductAdvertsList",
-    "RelativePath": "api/Products/ProductAdvertsListByEmployee",
+    "Method": "ProductAdvertsListByEmployeeFalse",
+    "RelativePath": "api/Products/ProductAdvertsListByEmployeeByFalse",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RealEstate_Dapper_Api.Controllers.ProductsController",
+    "Method": "ProductAdvertsListByEmployeeByTrue",
+    "RelativePath": "api/Products/ProductAdvertsListByEmployeeByTrue",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

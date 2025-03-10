@@ -17,11 +17,22 @@ namespace RealEstate_Dapper_UI.Areas.EstateAgent.Controllers
             _loginService = loginService;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> ActiveAdverts()
         {
-        
             var client = _httpClientFactory.CreateClient();
-            var responsemassage = await client.GetAsync(PublicValues.Url + $"Products/ProductAdvertsListByEmployee?id={_loginService.GetUserId}");
+            var responsemassage = await client.GetAsync(PublicValues.Url + $"Products/ProductAdvertsListByEmployeeByTrue?id={_loginService.GetUserId}");
+            if (responsemassage.IsSuccessStatusCode)
+            {
+                var jsonData = await responsemassage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<List<ResultProductAdvertListWithCategoryByEmployeeDto>>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
+        public async Task<IActionResult> PassiveAdverts()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var responsemassage = await client.GetAsync(PublicValues.Url + $"Products/ProductAdvertsListByEmployeeByFalse?id={_loginService.GetUserId}");
             if (responsemassage.IsSuccessStatusCode)
             {
                 var jsonData = await responsemassage.Content.ReadAsStringAsync();

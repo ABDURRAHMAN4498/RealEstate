@@ -720,7 +720,29 @@
         }
       }
     },
-    "/api/Products/ProductAdvertsListByEmployee": {
+    "/api/Products/ProductAdvertsListByEmployeeByTrue": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Products/ProductAdvertsListByEmployeeByFalse": {
       "get": {
         "tags": [
           "Products"

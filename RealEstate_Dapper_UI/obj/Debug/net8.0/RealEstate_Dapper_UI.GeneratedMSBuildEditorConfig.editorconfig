@@ -40,12 +40,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXN0YXRlQWdlbnRcVmlld3NcTXlBZHZlcnRzXEFjdGl2ZUFkdmVydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/STH/Desktop/AspNetCore/RealEstate/RealEstate_Dapper_UI/Areas/EstateAgent/Views/MyAdverts/CreateAdvert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXN0YXRlQWdlbnRcVmlld3NcTXlBZHZlcnRzXENyZWF0ZUFkdmVydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/STH/Desktop/AspNetCore/RealEstate/RealEstate_Dapper_UI/Areas/EstateAgent/Views/MyAdverts/PassiveAdverts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXN0YXRlQWdlbnRcVmlld3NcTXlBZHZlcnRzXFBhc3NpdmVBZHZlcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/STH/Desktop/AspNetCore/RealEstate/RealEstate_Dapper_UI/Areas/EstateAgent/Views/Shared/Components/_NavbarLast3MessageComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXN0YXRlQWdlbnRcVmlld3NcU2hhcmVkXENvbXBvbmVudHNcX05hdmJhckxhc3QzTWVzc2FnZUNvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/STH/Desktop/AspNetCore/RealEstate/RealEstate_Dapper_UI/Areas/EstateAgent/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcRXN0YXRlQWdlbnRcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/STH/Desktop/AspNetCore/RealEstate/RealEstate_Dapper_UI/Views/Admin/Index.cshtml]

@@ -1,4 +1,4 @@
-﻿namespace RealEstate_Dapper_UI.Dtos.ProductDtos
+﻿namespace RealEstate_Dapper_Api.Dtos.ProductDtos
 {
     public class CreateProductDto
     {
@@ -13,7 +13,23 @@
         public string Type { get; set; }
         public DateTime AdvertisementDate { get; set; }
         public bool ProductStatus { get; set; }
-        public string ProductCategory { get; set; }
+        public int ProductCategory { get; set; }
         public bool DealOfTheDay { get; set; }
     }
+    /*
+     [ProductId]
+      ,[Title]
+      ,[Price]
+      ,[CoverImage]
+      ,[City]
+      ,[District]
+      ,[Address]
+      ,[Description]
+      ,[ProductCategory]
+      ,[EmplooyeId]
+      ,[Type]
+      ,[DealOfTheDay]
+      ,[AdvertisementDate]
+      ,[ProductStatus]
+     */
 }

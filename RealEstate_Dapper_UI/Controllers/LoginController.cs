@@ -55,13 +55,11 @@ namespace RealEstate_Dapper_UI.Controllers
                             IsPersistent = true 
                         };
                         await HttpContext.SignInAsync(JwtBearerDefaults.AuthenticationScheme,new ClaimsPrincipal(claimsIdentity),authProps);
-                        return Redirect("EstateAgent/Dashboard/Index");
+                        return RedirectToAction("Index","Dashboard",new {area="EstateAgent"});
                     }
                 }
             }
             return View();
         }
-
-
     }
 }

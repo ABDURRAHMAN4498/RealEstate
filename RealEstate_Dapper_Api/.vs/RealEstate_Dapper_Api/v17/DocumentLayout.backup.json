@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_api\\dtos\\productdtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:dtos\\productdtos\\createproductdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_api\\repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15D8D01F-47B3-453A-A623-DC3D4FD2A542}|RealEstate_Dapper_Api.csproj|solutionrelative:repositories\\productrepository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,43 +26,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateProductDto.cs",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ProductDtos\\CreateProductDto.cs",
+              "RelativeDocumentMoniker": "Dtos\\ProductDtos\\CreateProductDto.cs",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Dtos\\ProductDtos\\CreateProductDto.cs",
+              "RelativeToolTip": "Dtos\\ProductDtos\\CreateProductDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T00:14:13.403Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ProductsController.cs",
               "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs*",
-              "RelativeToolTip": "Controllers\\ProductsController.cs*",
-              "ViewState": "AgIAACcAAAAAAAAAAAAkwDEAAAAJAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Controllers\\ProductsController.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T21:53:18.52Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ProductRepository\\ProductRepository.cs",
               "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\ProductRepository.cs",
               "RelativeToolTip": "Repositories\\ProductRepository\\ProductRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAewCwAAAB9AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwDMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T21:51:17.848Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "IProductRepository.cs",
               "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ProductRepository\\IProductRepository.cs",
               "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Repositories\\ProductRepository\\IProductRepository.cs",
               "RelativeToolTip": "Repositories\\ProductRepository\\IProductRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T21:48:54.519Z",
               "EditorCaption": ""

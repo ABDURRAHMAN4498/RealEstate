@@ -1,7 +1,7 @@
-﻿@model CreateProductDto
+@model CreateProductDto
 @{
     ViewData["Title"] = "CreateProduct";
-    Layout = "~/Views/Admin/Index.cshtml";
+    Layout = "~/Areas/EstateAgent/Views/LayoutEstateAgent/Index.cshtml";
 }
 <div class="container-fluid pt-4 px-4">
     <div class="row g-4">
@@ -9,7 +9,7 @@
             <div class="bg-light rounded h-100 p-4">
                 <h6 class="mb-4">Yeni İlan Ekleme Sayfası</h6>
                 <div class="table-responsive">
-                    <form asp-action="CreateCategory" asp-controller="Category" method="post">
+                    <form asp-action="CreateAdvert" asp-controller="MyAdverts" asp-area="EstateAgent" method="post">
                         <label>İlan Başlığı</label>
                         <input type="text" asp-for="Title" class="form-control" />
                         <br />
@@ -20,7 +20,8 @@
                         <input type="text" asp-for="District" class="form-control" />
                         <br />
                         <label>Kategory</label>
-                        @Html.DropDownListFor(x => x.ProductCategory, (List<SelectListItem>)ViewBag.Categories,new {@class="form-control"})
+                        <select asp-for="ProductCategory" class="form-control" asp-items="ViewBag.Categories"></select>
+                        @* @Html.DropDownListFor(x => x.ProductCategory, (List<SelectListItem>)ViewBag.Categories,new {@class="form-control"}) *@
                         <br />
                         <label>Fiyat</label>
                         <input type="text" asp-for="Price" class="form-control" />
@@ -29,12 +30,15 @@
                         <input type="text" asp-for="Type" class="form-control" />
                         <br />
                         <label>Kapak Fotografı</label>
-                        <input type="file"  class="form-control" />
+                        <input type="text" asp-for="CoverImage"  class="form-control" />
                         <br />
                         <label>İlan Açık Adresi</label>
-                        <textarea type="text" asp-for="Title" class="form-control" rows="5"></textarea>
+                        <textarea type="text" asp-for="Address" class="form-control" rows="5"></textarea>
                         <br />
-                        <button class="btn btn-primary" type="submit">Kategory Kaydet</button>
+                        <label>İlan Açıklaması</label>
+                        <textarea type="text" asp-for="Description" class="form-control" rows="5"></textarea>
+                        <br />
+                        <button class="btn btn-primary" type="submit">İlanı Kaydet</button>
                     </form>
                 </div>
             </div>

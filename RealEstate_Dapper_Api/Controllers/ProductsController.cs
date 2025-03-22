@@ -1,5 +1,7 @@
+using System.Windows.Markup;
 using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_Api.Dtos.ContactDtos;
+using RealEstate_Dapper_Api.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_Api.Dtos.ProductDtos;
 using RealEstate_Dapper_Api.Repositories.ProductRepository;
 
@@ -63,6 +65,13 @@ namespace RealEstate_Dapper_Api.Controllers
             await _productRepository.CreateProduct(createProductDto);
             return Ok("İlan Başarı ile Eklendi");
         }
+        [HttpGet("GetProductByProductId")]
+        public async Task<IActionResult> GetProductByProductId(int id){
+            var value =  await _productRepository.GetProductByProductId(id);
+            return Ok(value);
+        }
+        
+
 
     }
 }

@@ -26,5 +26,6 @@ namespace  RealEstate_Dapper_Api.Dtos.ProductDetailDtos
         public string Location { get; set; }
         public string VideoUrl { get; set; }
         public int ProductId { get; set; }
+        public int ProductSize { get; set; }
     }
 }

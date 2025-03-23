@@ -1,21 +1,20 @@
-
-
+@model SinglePropertyVM
 @{
     ViewBag.Title = "PropertySingle";
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
 
-<section class="w3l-about-breadcrumb">
-<div class="breadcrumb-bg breadcrumb-bg-about pt-5">
-    <div class="container pt-lg-5 py-3">
-    </div>
-</div>
-</section>
+@* <section class="w3l-about-breadcrumb"> *@
+@* <div class="breadcrumb-bg breadcrumb-bg-about pt-5"> *@
+@*     <div class="container pt-lg-5 py-3"> *@
+@*     </div> *@
+@* </div> *@
+@* </section> *@
 <section class="w3l-breadcrumb">
     <div class="container">
         <ul class="breadcrumbs-custom-path">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> Property</li>
+            <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+            <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> İlanlar</li>
             <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> property single</li>
         </ul>
     </div>
@@ -26,26 +25,28 @@
         <div class="inner mb-4">
             <ul class="blog-single-author-date align-items-center">
                 <li>
-                    <div class="listing-category"><span>Buy</span><span>Rent</span></div>
+                    <div class="listing-category"><span>@Model.Product.type</span></div>
                 </li>
-                <li><span class="fa fa-clock-o"></span> 5 months ago</li>
+                <li><span
+                        class="fa fa-clock-o"></span> @((Model.Month > 0 ? $"{Model.Month} ay " : "") + (Model.Day > 0 ? $"{Model.Day} gün " : ""))önce
+                </li>
                 <li><span class="fa fa-eye"></span> 250 views</li>
             </ul>
         </div>
         <div class="post-content">
-            <h2 class="title-single"> A digital prescription for the pharma industry</h2>
+            <h2 class="title-single">@Model.Product.title</h2>
         </div>
         <div class="blo-singl mb-4">
             <ul class="blog-single-author-date align-items-center">
                 <li>
-                    <p>Unnamed road, San Francisco, CA 94102</p>
+                    <p>@Model.Product.address, @Model.Product.city, @Model.Product.district </p>
                 </li>
-                <li><span class="fa fa-bed"></span> 3 Beds</li>
-                <li><span class="fa fa-bath"></span> 4 Baths</li>
-                <li><span class="fa fa-share-square-o"></span> 1258 sqrft</li>
+                <li><span class="fa fa-bed"></span> @Model.ProductDetail.badRoomCount Yatak Odası</li>
+                <li><span class="fa fa-bath"></span> @Model.ProductDetail.bathRoomCount Banyo</li>
+                <li><span class="fa fa-share-square-o"></span> @Model.ProductDetail.ProductSize (m²)</li>
             </ul>
             <ul class="share-post">
-                <a href="#url" class="cost-estate m-o">$25,0045</a>
+                <a href="#url" class="cost-estate m-o">@Model.Product.price.ToString("c")</a>
             </ul>
         </div>
         <div class="row">
@@ -53,21 +54,16 @@
                 <div class="blog-single-post">
                     <div class="single-post-image mb-5">
                         <div class="owl-blog owl-carousel owl-theme">
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p1.jpg" class="img-fluid radius-image" alt="image">
+                            @foreach (var image in Model.ProductImage)
+                            {
+                                <div class="item">
+                                    <div class="card">
+                                        <img src="@image.imageUrl" style="height: 500px;" class="img-fluid radius-image"
+                                             alt="@image.productId">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p2.jpg" class="img-fluid radius-image" alt="image">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="card">
-                                    <img src="~/starter/assets/images/p3.jpg" class="img-fluid radius-image" alt="image">
-                                </div>
-                            </div>
+                            }
+                            
                         </div>
                     </div>
 
@@ -86,30 +82,30 @@
                         <div class="single-bg-white">
                             <h3 class="post-content-title mb-4">Property detail</h3>
                             <ul class="details-list">
-                                <li><strong>Property id :</strong> PRPT12345 </li>
-                                <li><strong>Property size :</strong> 1200sqft </li>
-                                <li><strong>Rooms :</strong> 2 </li>
-                                <li><strong>Bedrooms :</strong> 5 </li>
-                                <li><strong>Bathrooms :</strong> 2 </li>
-                                <li><strong>Exterior material :</strong> Brick </li>
-                                <li><strong>Structure type :</strong> Wood </li>
-                                <li><strong>Garage size :</strong> 15 cars </li>
-                                <li><strong>Garages :</strong> 15 </li>
-                                <li><strong>Property Price :</strong> $ 750 </li>
-                                <li><strong>Built Year :</strong> 2018 </li>
-                                <li><strong>Avaiable from :</strong> Aug 2019 </li>
+                                <li><strong>Property id :</strong> PRPT12345</li>
+                                <li><strong>Property size :</strong> 1200sqft</li>
+                                <li><strong>Rooms :</strong> 2</li>
+                                <li><strong>Bedrooms :</strong> 5</li>
+                                <li><strong>Bathrooms :</strong> 2</li>
+                                <li><strong>Exterior material :</strong> Brick</li>
+                                <li><strong>Structure type :</strong> Wood</li>
+                                <li><strong>Garage size :</strong> 15 cars</li>
+                                <li><strong>Garages :</strong> 15</li>
+                                <li><strong>Property Price :</strong> $ 750</li>
+                                <li><strong>Built Year :</strong> 2018</li>
+                                <li><strong>Avaiable from :</strong> Aug 2019</li>
                             </ul>
                         </div>
                         <div class="single-bg-white">
                             <h3 class="post-content-title mb-4">Amenities</h3>
                             <ul class="details-list">
                                 <li><strong>Air Conditioning </strong></li>
-                                <li><strong>Buil-In Wardrobes </strong> </li>
-                                <li><strong>Dishwasher</strong> </li>
-                                <li><strong>Floor Coverings </strong> </li>
-                                <li><strong>Medical / Clinic </strong> </li>
-                                <li><strong>Fencing</strong> </li>
-                                <li><strong>Internet and wifi </strong> </li>
+                                <li><strong>Buil-In Wardrobes </strong></li>
+                                <li><strong>Dishwasher</strong></li>
+                                <li><strong>Floor Coverings </strong></li>
+                                <li><strong>Medical / Clinic </strong></li>
+                                <li><strong>Fencing</strong></li>
+                                <li><strong>Internet and wifi </strong></li>
                             </ul>
                         </div>
                     </div>
@@ -142,7 +138,7 @@
                         </div>
 
                         <article class="post">
-                            <figure class="post-thumb"><img src="assets/images/l5.jpg" class="radius-image" alt="">
+                            <figure class="post-thumb"><img src="~/starter/assets/images/l5.jpg" class="radius-image" alt="">
                             </figure>
                             <div class="text mb-0"><a href="#blog-single">Company realty
                                 </a>
@@ -161,7 +157,8 @@
                         </div>
 
                         <article class="post">
-                            <figure class="post-thumb"><img src="~/starter/assets/images/l1.jpg" class="radius-image" alt="">
+                            <figure class="post-thumb"><img src="~/starter/assets/images/l1.jpg" class="radius-image"
+                                                            alt="">
                             </figure>
                             <div class="text"><a href="#blog-single">Why we are the best in the business
                                 </a>
@@ -170,7 +167,8 @@
                         </article>
 
                         <article class="post">
-                            <figure class="post-thumb"><img src="~/starter/assets/images/l2.jpg" class="radius-image" alt="">
+                            <figure class="post-thumb"><img src="~/starter/assets/images/l2.jpg" class="radius-image"
+                                                            alt="">
                             </figure>
                             <div class="text"><a href="#blog-single">Build your next landing page.
                                 </a>
@@ -179,7 +177,8 @@
                         </article>
 
                         <article class="post">
-                            <figure class="post-thumb"><img src="~/starter/assets/images/l3.jpg" class="radius-image" alt="">
+                            <figure class="post-thumb"><img src="~/starter/assets/images/l3.jpg" class="radius-image"
+                                                            alt="">
                             </figure>
                             <div class="text"><a href="#blog-single">
                                     Simply the best. Better than the rest.</a>

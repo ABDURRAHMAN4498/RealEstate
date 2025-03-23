@@ -1,7 +1,11 @@
+using System.Runtime.InteropServices.JavaScript;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using RealEstate_Dapper_UI.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_UI.Dtos.ProductDtos;
+using RealEstate_Dapper_UI.Dtos.ProductImageDto;
 using RealEstate_Dapper_UI.StaticValues;
+using RealEstate_Dapper_UI.ViewModels;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
@@ -31,7 +35,28 @@ namespace RealEstate_Dapper_UI.Controllers
         [HttpGet]
         public async Task<IActionResult> PropertySingle(int id)
         {
-            return View();
+            SingleProoertyVM model = new SingleProoertyVM();
+            id = 1;
+            //product
+            var client = _httpClientFactory.CreateClient();
+            var productResponseMessage =await client.GetAsync(PublicValues.Url+"Products/GetProductByProductId?id=" + id);
+            var productJsonData = await productResponseMessage.Content.ReadAsStringAsync(); 
+            model.Product = JsonConvert.DeserializeObject<ResultProductDto>(productJsonData);
+            //model.Product.advertisementDate = (DateTime.Now - model.Product.advertisementDate);
+            //product detail 
+            TimeSpan timeSpan = DateTime.Now - model.Product.advertisementDate;
+            int totalDays = timeSpan.Days;
+            model.Month=totalDays/30;
+            model.Day=totalDays%30;
+            var productDetailResponseMessage =await client.GetAsync(PublicValues.Url+"ProductDetails/GetProductDetailByProductId?id=" + id);
+            var productDetailJsonData = await productDetailResponseMessage.Content.ReadAsStringAsync(); 
+            model.ProductDetail = JsonConvert.DeserializeObject<GetProductDetailByIdDto>(productDetailJsonData);
+             
+            
+            var productImageResponseMessage = await client.GetAsync(PublicValues.Url+"ProductImage/GetProductImageById?id=" + id);
+            var productImageJsonData = await productImageResponseMessage.Content.ReadAsStringAsync();
+            model.ProductImage = JsonConvert.DeserializeObject<List<GetProductImageDto>>(productImageJsonData);
+            return View(model);
         } 
     }    
 }

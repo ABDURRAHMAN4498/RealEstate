@@ -38,8 +38,7 @@
               "RelativeToolTip": "Dtos\\ProductDtos\\CreateProductDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T00:14:13.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T00:14:13.403Z"
             },
             {
               "$type": "Document",
@@ -49,7 +48,7 @@
               "RelativeDocumentMoniker": "Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_Api\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Controllers\\ProductsController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAkwDsAAAAjAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwDsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T21:53:18.52Z",
               "EditorCaption": ""
@@ -64,8 +63,7 @@
               "RelativeToolTip": "Repositories\\ProductRepository\\ProductRepository.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAQwDMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T21:51:17.848Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T21:51:17.848Z"
             },
             {
               "$type": "Document",
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Repositories\\ProductRepository\\IProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T21:48:54.519Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T21:48:54.519Z"
             }
           ]
         }

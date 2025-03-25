@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_ui\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_ui\\views\\property\\propertysingle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|solutionrelative:views\\property\\propertysingle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_ui\\areas\\estateagent\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|solutionrelative:areas\\estateagent\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|c:\\users\\sth\\desktop\\aspnetcore\\realestate\\realestate_dapper_ui\\views\\shared\\components\\_estateagentlast5productcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FD2A7621-571B-4DE2-9B3D-4AF22C1BE2C9}|RealEstate_Dapper_UI.csproj|solutionrelative:views\\shared\\components\\_estateagentlast5productcomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Views\\Shared\\Components\\_EstateAgentLast5ProductComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Components\\_EstateAgentLast5ProductComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Views\\Shared\\Components\\_EstateAgentLast5ProductComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Components\\_EstateAgentLast5ProductComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAB4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:12:28.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Areas\\EstateAgent\\Views\\Dashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\EstateAgent\\Views\\Dashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Areas\\EstateAgent\\Views\\Dashboard\\Index.cshtml",
+              "RelativeToolTip": "Areas\\EstateAgent\\Views\\Dashboard\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T01:11:51.239Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Controllers\\LoginController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
-              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Controllers\\LoginController.cs",
-              "RelativeToolTip": "Controllers\\LoginController.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAQwDEAAABtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-17T20:07:14.023Z",
+              "Title": "PropertySingle.cshtml",
+              "DocumentMoniker": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Views\\Property\\PropertySingle.cshtml",
+              "RelativeDocumentMoniker": "Views\\Property\\PropertySingle.cshtml",
+              "ToolTip": "C:\\Users\\STH\\Desktop\\AspNetCore\\RealEstate\\RealEstate_Dapper_UI\\Views\\Property\\PropertySingle.cshtml",
+              "RelativeToolTip": "Views\\Property\\PropertySingle.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFYAAAB5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:06:54.454Z",
               "EditorCaption": ""
             }
           ]

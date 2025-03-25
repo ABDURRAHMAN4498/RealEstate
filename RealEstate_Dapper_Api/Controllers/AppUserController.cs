@@ -1,12 +1,22 @@
 using Microsoft.AspNetCore.Mvc;
+using RealEstate_Dapper_Api.Repositories.AppUserRepositories;
 
 namespace RealEstate_Dapper_Api.Controllers;
-
-public class AppUserController : Controller
+[Route("api/[controller]")]
+[ApiController]
+public class AppUserController : ControllerBase
 {
-    // GET
-    public IActionResult Index()
+    private readonly IAppUserRepository _appUserRepository;
+
+    public AppUserController(IAppUserRepository appUserRepository)
     {
-        return View();
+        _appUserRepository = appUserRepository;
+    }
+
+    [HttpGet("GetAppUserByProductId")]
+    public async Task<IActionResult> GetAppUserByProductId(int id)
+    {
+        var value = await _appUserRepository.GetAppUserByProductId(id);
+        return Ok(value);
     }
 }

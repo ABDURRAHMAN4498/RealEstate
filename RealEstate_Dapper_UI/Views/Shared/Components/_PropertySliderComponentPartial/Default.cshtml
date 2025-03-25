@@ -1,0 +1,14 @@
+﻿
+@model List<GetProductImageDto>
+<div class="single-post-image mb-5">
+    <div class="owl-blog owl-carousel owl-theme">
+        @foreach (var image in Model)
+        {
+            <div class="item">
+                <div class="card">
+                    <img src="@image.imageUrl" style="height: 500px;" class="img-fluid radius-image" alt="@image.productId">
+                </div>
+            </div>
+        }
+    </div>
+</div>

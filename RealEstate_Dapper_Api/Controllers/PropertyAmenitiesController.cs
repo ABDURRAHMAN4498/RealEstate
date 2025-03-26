@@ -1,12 +1,20 @@
 using Microsoft.AspNetCore.Mvc;
+using RealEstate_Dapper_Api.Repositories.PropertyAmenityRepositories;
 
 namespace RealEstate_Dapper_Api.Controllers;
-
-public class PropertyAmenitiesController : Controller
+[Route("api/[controller]")]
+[ApiController]
+public class PropertyAmenitiesController : ControllerBase
 {
-    // GET
-    public IActionResult Index()
+    private readonly IPropertyAmenityRepository  _propertyAmenityRepository;
+    public PropertyAmenitiesController(IPropertyAmenityRepository propertyAmenityRepository)
     {
-        return View();
+        _propertyAmenityRepository = propertyAmenityRepository;
+    }
+    [HttpGet("GetAllPropertyAmenityByStatusTrue")]
+    public async Task<IActionResult> Index(int id)
+    {
+        var values = await _propertyAmenityRepository.GetAllPropertyAmenityByStatusTrue(id);
+        return Ok(values);
     }
 }

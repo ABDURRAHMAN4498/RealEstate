@@ -2,6 +2,7 @@ using RealEstate_Dapper_UI.Dtos.AppUser;
 using RealEstate_Dapper_UI.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_UI.Dtos.ProductDtos;
 using RealEstate_Dapper_UI.Dtos.ProductImageDto;
+using RealEstate_Dapper_UI.Dtos.PropertyAmenityDtos;
 
 namespace RealEstate_Dapper_UI.ViewModels;
 
@@ -11,6 +12,7 @@ public class SinglePropertyVM
     public GetProductDetailByIdDto? ProductDetail { get; set; }
     public List<GetProductImageDto>? ProductImage { get; set; }
     public GetAppUserByProductId? AppUser { get; set; }
+    public List<ResultPropertyAmenityByStatusTrueDto>? PropertyAmenity { get; set; }
     public  int Month { get; set; }
     public int Day { get; set; }
 }

@@ -120,6 +120,16 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
             }
         }
 
+        public async Task<List<ResultProductWithSearchListDto>> ResultProductWithSearchList(string searchKeyValue, int propertyCategoryId, string City)
+        {
+            string query = $"SELECT * from Product where Title LIKE '%{searchKeyValue}%' and ProductCategory = {propertyCategoryId} and City LIKE '%{City}%'";
+            using (var connection = _context.CreaConnection())
+            {
+                var values = await connection.QueryAsync<ResultProductWithSearchListDto>(query);
+                return values.ToList();
+            }
+        }
+
         public async Task ProductDealOfTheDayChangeToFalse(int id)
         {
             string query = $"Update Product set DealOfTheDay='False' Where ProductId = {id}";

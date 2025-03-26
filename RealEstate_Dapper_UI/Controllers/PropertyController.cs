@@ -5,6 +5,7 @@ using RealEstate_Dapper_UI.Dtos.AppUser;
 using RealEstate_Dapper_UI.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_UI.Dtos.ProductDtos;
 using RealEstate_Dapper_UI.Dtos.ProductImageDto;
+using RealEstate_Dapper_UI.Dtos.PropertyAmenityDtos;
 using RealEstate_Dapper_UI.StaticValues;
 using RealEstate_Dapper_UI.ViewModels;
 
@@ -52,10 +53,14 @@ namespace RealEstate_Dapper_UI.Controllers
             var productImageJsonData = await productImageResponseMessage.Content.ReadAsStringAsync();
             model.ProductImage = JsonConvert.DeserializeObject<List<GetProductImageDto>>(productImageJsonData);
             //App User Info.
-            var responseMessage = await client.GetAsync(PublicValues.Url + "AppUser/GetAppUserByProductId?id=" + id);
-            var jsonData = await responseMessage.Content.ReadAsStringAsync();
-            model.AppUser = JsonConvert.DeserializeObject<GetAppUserByProductId>(jsonData);
-            
+            var appUserResponseMessage = await client.GetAsync(PublicValues.Url + "AppUser/GetAppUserByProductId?id=" + id);
+            var appUserJsonData = await appUserResponseMessage.Content.ReadAsStringAsync();
+            model.AppUser = JsonConvert.DeserializeObject<GetAppUserByProductId>(appUserJsonData);
+
+            //PropertyAmenity
+            var propertyAmenityResponseMessage = await client.GetAsync(PublicValues.Url + "PropertyAmenities/GetAllPropertyAmenityByStatusTrue?id=" + id);
+            var propertyAmenityJsonData = await propertyAmenityResponseMessage.Content.ReadAsStringAsync();
+            model.PropertyAmenity = JsonConvert.DeserializeObject<List<ResultPropertyAmenityByStatusTrueDto>>(propertyAmenityJsonData);
             return View(model);
         } 
     }    

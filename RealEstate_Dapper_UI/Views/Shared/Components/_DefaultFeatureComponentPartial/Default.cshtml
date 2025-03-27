@@ -1,4 +1,5 @@
-﻿<section class="w3l-cover-3">
+﻿@model SearchListVM
+<section class="w3l-cover-3">
     <div class="cover top-bottom">
         <div class="container">
             <div class="middle-section text-center">
@@ -13,30 +14,25 @@
                             <li><a href="#link">Yazlık</a></li>
                         </ul>
                     </div>
-                    <form action="#" class="w3l-cover-3-gd" method="GET">
-                        <input type="search" name="text" placeholder="Anahtar Kelime Girin" required>
+                    <form asp-controller="Property" asp-action="PropertyListWithSearch" class="w3l-cover-3-gd" method="get">
+                        <input type="search" name="searchKeyValue" placeholder="Anahtar Kelime Girin" required>
                         <span class="input-group-btn">
-                            <select class="btn btn-default" name="ext" required>
+                            <select class="btn btn-default" name="propertyCategoryId" required>
                                 <option selected="">Gayrimenkul Türü</option>
-                                <option>Villa</option>
-                                <option>Daire</option>
-                                <option>Private house</option>
-                                <option>Building</option>
-                                <option>Shop</option>
-                                <option>Social housing</option>
-                                <option>Town house</option>
+                                @foreach (var item in Model.Categories)
+                                {
+                                    <option value="@item.CategoryId">@item.CategoryName</option>
+                                }
                             </select>
                         </span>
                         <span class="input-group-btn">
-                            <select class="btn btn-default" name="ext" required>
-                                <option selected="">Ülke Seçiniz</option>
-                                <option>Australia</option>
-                                <option>London</option>
-                                <option>India</option>
-                                <option>Bangladesh</option>
-                                <option>Saudi Arabia</option>
-                                <option>America</option>
-                                <option>Srilanka</option>
+                            <select class="btn btn-default" name="City" required>
+                                <option selected="">Şehir Seçiniz</option>
+                                @foreach (var item in Model.Cities)
+                                {
+                                    <option value="@item">@item</option>
+                                }
+                                
                             </select>
                         </span>
                         <button type="submit" class="btn-primary">Ara</button>

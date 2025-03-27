@@ -146,5 +146,14 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
                 connection.Execute(query);
             }
         }
+
+        public async Task<List<string>> GetCitiesList()
+        {
+            string query = "SELECT  City from Product GROUP  BY  City ORDER By City ";
+            using(var connection = _context.CreaConnection()){
+                var values = await connection.QueryAsync<string>(query);
+                return values.ToList();
+            }
+        }
     }
 }

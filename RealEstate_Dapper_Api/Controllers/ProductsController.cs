@@ -77,6 +77,12 @@ namespace RealEstate_Dapper_Api.Controllers
             var values = await _productRepository.ResultProductWithSearchList(searchKeyValue, propertyCategoryId, City);
             return Ok(values);
         } 
+        [HttpGet("GetCitiesList")]
+        public async Task<IActionResult> GetCitiesList(){
+            var values =await _productRepository.GetCitiesList();
+            return Ok(values);
+
+        }
         
 
 

@@ -14,22 +14,44 @@ namespace RealEstate_Dapper_UI.Controllers
     public class PropertyController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
+
         public PropertyController(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
-        public async Task<IActionResult> Index() 
+
+        public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage =await client.GetAsync(PublicValues.Url+"Products/ProductListWithCategory");
+            var responseMessage = await client.GetAsync(PublicValues.Url + "Products/ProductListWithCategory");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var value = JsonConvert.DeserializeObject<List<ResultProductDto>>(jsonData);
                 return View(value);
             }
-            return View(); 
+
+            return View();
         }
+
+        [HttpGet]
+        public async Task<IActionResult> PropertyListWithSearch(string searchKeyValue, int propertyCategoryId,
+            string City)
+        {
+            
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync(PublicValues.Url +
+                                                        $"Products/ResultProductWithSearchList?searchKeyValue={searchKeyValue}&propertyCategoryId={propertyCategoryId}&City={City}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var value = JsonConvert.DeserializeObject<List<ResultProductWithSearchListDto>>(jsonData);
+                return View(value);
+            }
+
+            return View();
+        }
+
         [HttpGet]
         public async Task<IActionResult> PropertySingle(int id)
         {
@@ -37,32 +59,38 @@ namespace RealEstate_Dapper_UI.Controllers
             id = 1;
             //product
             var client = _httpClientFactory.CreateClient();
-            var productResponseMessage =await client.GetAsync(PublicValues.Url+"Products/GetProductByProductId?id=" + id);
-            var productJsonData = await productResponseMessage.Content.ReadAsStringAsync(); 
+            var productResponseMessage =
+                await client.GetAsync(PublicValues.Url + "Products/GetProductByProductId?id=" + id);
+            var productJsonData = await productResponseMessage.Content.ReadAsStringAsync();
             model.Product = JsonConvert.DeserializeObject<ResultProductDto>(productJsonData);
             //product detail 
             TimeSpan timeSpan = DateTime.Now - model.Product.advertisementDate;
             int totalDays = timeSpan.Days;
-            model.Month=totalDays/30;
-            model.Day=totalDays%30;
-            var productDetailResponseMessage =await client.GetAsync(PublicValues.Url+"ProductDetails/GetProductDetailByProductId?id=" + id);
-            var productDetailJsonData = await productDetailResponseMessage.Content.ReadAsStringAsync(); 
+            model.Month = totalDays / 30;
+            model.Day = totalDays % 30;
+            var productDetailResponseMessage =
+                await client.GetAsync(PublicValues.Url + "ProductDetails/GetProductDetailByProductId?id=" + id);
+            var productDetailJsonData = await productDetailResponseMessage.Content.ReadAsStringAsync();
             model.ProductDetail = JsonConvert.DeserializeObject<GetProductDetailByIdDto>(productDetailJsonData);
             //Product Images
-            var productImageResponseMessage = await client.GetAsync(PublicValues.Url+"ProductImage/GetProductImageById?id=" + id);
+            var productImageResponseMessage =
+                await client.GetAsync(PublicValues.Url + "ProductImage/GetProductImageById?id=" + id);
             var productImageJsonData = await productImageResponseMessage.Content.ReadAsStringAsync();
             model.ProductImage = JsonConvert.DeserializeObject<List<GetProductImageDto>>(productImageJsonData);
             //App User Info.
-            var appUserResponseMessage = await client.GetAsync(PublicValues.Url + "AppUser/GetAppUserByProductId?id=" + id);
+            var appUserResponseMessage =
+                await client.GetAsync(PublicValues.Url + "AppUser/GetAppUserByProductId?id=" + id);
             var appUserJsonData = await appUserResponseMessage.Content.ReadAsStringAsync();
             model.AppUser = JsonConvert.DeserializeObject<GetAppUserByProductId>(appUserJsonData);
 
             //PropertyAmenity
-            var propertyAmenityResponseMessage = await client.GetAsync(PublicValues.Url + "PropertyAmenities/GetAllPropertyAmenityByStatusTrue?id=" + id);
+            var propertyAmenityResponseMessage =
+                await client.GetAsync(PublicValues.Url + "PropertyAmenities/GetAllPropertyAmenityByStatusTrue?id=" +
+                                      id);
             var propertyAmenityJsonData = await propertyAmenityResponseMessage.Content.ReadAsStringAsync();
-            model.PropertyAmenity = JsonConvert.DeserializeObject<List<ResultPropertyAmenityByStatusTrueDto>>(propertyAmenityJsonData);
+            model.PropertyAmenity =
+                JsonConvert.DeserializeObject<List<ResultPropertyAmenityByStatusTrueDto>>(propertyAmenityJsonData);
             return View(model);
-        } 
-    }    
+        }
+    }
 }
-

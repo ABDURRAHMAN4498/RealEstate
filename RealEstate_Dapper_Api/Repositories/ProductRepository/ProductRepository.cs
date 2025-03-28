@@ -1,4 +1,5 @@
-﻿using Dapper;
+﻿using System.Windows.Markup;
+using Dapper;
 using RealEstate_Dapper_Api.Dtos.ProductDetailDtos;
 using RealEstate_Dapper_Api.Dtos.ProductDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
@@ -154,6 +155,15 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
                 var values = await connection.QueryAsync<string>(query);
                 return values.ToList();
             }
+        }
+
+        public async Task<List<ResultProductWithCategoryDto>> GetProductByDealOfTheDayTrueWithCategoryAsync()
+        {
+            string query = "SELECT ProductId, Title, Price, City, District, CategoryName, CoverImage, Type, Address, DealOfTheDay from Product inner join Category  on ProductCategory  = CategoryId where DealOfTheDay = 1";
+            using(var connection = _context.CreaConnection()){
+                var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);
+                return values.ToList(); 
+            } 
         }
     }
 }

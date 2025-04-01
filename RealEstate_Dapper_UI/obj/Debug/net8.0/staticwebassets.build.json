@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jc0iUZ/ncs0kdWZezaz93AW2eQEParNatdynAsqfwCA=",
+  "Hash": "Z2rgaSd1SHohCClFsq4GwVaq6y7YLwtyB89T2ev3jDs=",
   "Source": "RealEstate_Dapper_UI",
   "BasePath": "_content/RealEstate_Dapper_UI",
   "Mode": "Default",
@@ -4168,8 +4168,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "dq3pcmntu2",
-      "Integrity": "28wiNVMarMzNDZm8gfu6BfcdJFHeKS5G4rfRhFeBbhI=",
+      "Fingerprint": "dd94vinjud",
+      "Integrity": "cT9oZGmY4nRmcbgaqfussK5YOWpL6IDpdqtm6VT/ii0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/starter/about.html"
@@ -5351,6 +5351,27 @@
       "OriginalItemSpec": "wwwroot/starter/images/6.jpg"
     },
     {
+      "Identity": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/images/noImage.jpeg",
+      "SourceId": "RealEstate_Dapper_UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/",
+      "BasePath": "_content/RealEstate_Dapper_UI",
+      "RelativePath": "starter/images/noImage#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hojjgd4o8m",
+      "Integrity": "n3GL2yRMMEW1XnqvbRAd3TPQtC7/iZbw6MdIFkg3RRg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/starter/images/noImage.jpeg"
+    },
+    {
       "Identity": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/index.html",
       "SourceId": "RealEstate_Dapper_UI",
       "SourceType": "Discovered",
@@ -5386,8 +5407,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6wo7bi1mtj",
-      "Integrity": "OoMv/C6SQNm6AdWoMj8z8B2UO8XZpSOU+DhwClyO6vE=",
+      "Fingerprint": "5nnn8w6boi",
+      "Integrity": "j4DWgPFLqEP7c1I9i8Ofw/7BxG4S/kJp9wHTgaLmGdM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/starter/listing.html"
@@ -21591,7 +21612,7 @@
       ]
     },
     {
-      "Route": "starter/about.dq3pcmntu2.html",
+      "Route": "starter/about.dd94vinjud.html",
       "AssetFile": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/about.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -21601,7 +21622,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22433"
+          "Value": "25553"
         },
         {
           "Name": "Content-Type",
@@ -21609,11 +21630,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"28wiNVMarMzNDZm8gfu6BfcdJFHeKS5G4rfRhFeBbhI=\""
+          "Value": "\"cT9oZGmY4nRmcbgaqfussK5YOWpL6IDpdqtm6VT/ii0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 22:52:00 GMT"
+          "Value": "Mon, 31 Mar 2025 13:31:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21623,7 +21644,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "dq3pcmntu2"
+          "Value": "dd94vinjud"
         },
         {
           "Name": "label",
@@ -21631,7 +21652,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-28wiNVMarMzNDZm8gfu6BfcdJFHeKS5G4rfRhFeBbhI="
+          "Value": "sha256-cT9oZGmY4nRmcbgaqfussK5YOWpL6IDpdqtm6VT/ii0="
         }
       ]
     },
@@ -21646,7 +21667,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "22433"
+          "Value": "25553"
         },
         {
           "Name": "Content-Type",
@@ -21654,11 +21675,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"28wiNVMarMzNDZm8gfu6BfcdJFHeKS5G4rfRhFeBbhI=\""
+          "Value": "\"cT9oZGmY4nRmcbgaqfussK5YOWpL6IDpdqtm6VT/ii0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 22:52:00 GMT"
+          "Value": "Mon, 31 Mar 2025 13:31:49 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -21668,7 +21689,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-28wiNVMarMzNDZm8gfu6BfcdJFHeKS5G4rfRhFeBbhI="
+          "Value": "sha256-cT9oZGmY4nRmcbgaqfussK5YOWpL6IDpdqtm6VT/ii0="
         }
       ]
     },
@@ -26265,6 +26286,88 @@
       ]
     },
     {
+      "Route": "starter/images/noImage.hojjgd4o8m.jpeg",
+      "AssetFile": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/images/noImage.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3GL2yRMMEW1XnqvbRAd3TPQtC7/iZbw6MdIFkg3RRg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 22:25:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hojjgd4o8m"
+        },
+        {
+          "Name": "label",
+          "Value": "starter/images/noImage.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3GL2yRMMEW1XnqvbRAd3TPQtC7/iZbw6MdIFkg3RRg="
+        }
+      ]
+    },
+    {
+      "Route": "starter/images/noImage.jpeg",
+      "AssetFile": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/images/noImage.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "30268"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"n3GL2yRMMEW1XnqvbRAd3TPQtC7/iZbw6MdIFkg3RRg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 31 Mar 2025 22:25:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-n3GL2yRMMEW1XnqvbRAd3TPQtC7/iZbw6MdIFkg3RRg="
+        }
+      ]
+    },
+    {
       "Route": "starter/index.9fdey3pvw7.html",
       "AssetFile": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/index.html",
       "Selectors": [],
@@ -26347,7 +26450,7 @@
       ]
     },
     {
-      "Route": "starter/listing.6wo7bi1mtj.html",
+      "Route": "starter/listing.5nnn8w6boi.html",
       "AssetFile": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/listing.html",
       "Selectors": [],
       "ResponseHeaders": [
@@ -26357,7 +26460,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28321"
+          "Value": "28320"
         },
         {
           "Name": "Content-Type",
@@ -26365,11 +26468,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OoMv/C6SQNm6AdWoMj8z8B2UO8XZpSOU+DhwClyO6vE=\""
+          "Value": "\"j4DWgPFLqEP7c1I9i8Ofw/7BxG4S/kJp9wHTgaLmGdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 22:52:00 GMT"
+          "Value": "Mon, 31 Mar 2025 13:24:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26379,7 +26482,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6wo7bi1mtj"
+          "Value": "5nnn8w6boi"
         },
         {
           "Name": "label",
@@ -26387,7 +26490,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OoMv/C6SQNm6AdWoMj8z8B2UO8XZpSOU+DhwClyO6vE="
+          "Value": "sha256-j4DWgPFLqEP7c1I9i8Ofw/7BxG4S/kJp9wHTgaLmGdM="
         }
       ]
     },
@@ -26402,7 +26505,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "28321"
+          "Value": "28320"
         },
         {
           "Name": "Content-Type",
@@ -26410,11 +26513,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OoMv/C6SQNm6AdWoMj8z8B2UO8XZpSOU+DhwClyO6vE=\""
+          "Value": "\"j4DWgPFLqEP7c1I9i8Ofw/7BxG4S/kJp9wHTgaLmGdM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 26 Mar 2025 22:52:00 GMT"
+          "Value": "Mon, 31 Mar 2025 13:24:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -26424,7 +26527,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OoMv/C6SQNm6AdWoMj8z8B2UO8XZpSOU+DhwClyO6vE="
+          "Value": "sha256-j4DWgPFLqEP7c1I9i8Ofw/7BxG4S/kJp9wHTgaLmGdM="
         }
       ]
     },

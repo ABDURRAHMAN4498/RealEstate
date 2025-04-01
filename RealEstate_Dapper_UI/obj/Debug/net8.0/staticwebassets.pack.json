@@ -1013,6 +1013,10 @@
       "PackagePath": "staticwebassets/starter/images/6.jpg"
     },
     {
+      "Id": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/images/noImage.jpeg",
+      "PackagePath": "staticwebassets/starter/images/noImage.jpeg"
+    },
+    {
       "Id": "/home/abdurrahman-sth/Desktop/AspnetCore/RealEstate/RealEstate_Dapper_UI/wwwroot/starter/index.html",
       "PackagePath": "staticwebassets/starter/index.html"
     },

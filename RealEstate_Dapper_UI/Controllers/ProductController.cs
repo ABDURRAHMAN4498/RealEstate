@@ -1,26 +1,27 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.CategoryDtos;
 using RealEstate_Dapper_UI.Dtos.ProductDtos;
-using RealEstate_Dapper_UI.StaticValues;
-using System.Security.Cryptography.X509Certificates;
+using RealEstate_Dapper_UI.Models;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
     public class ProductController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public ProductController(IHttpClientFactory httpClientFactory)
+        private readonly ApiSettings _apiSettings;
+        public ProductController(IHttpClientFactory httpClientFactory,IOptions<ApiSettings> apiSettings)
         {
             _httpClientFactory = httpClientFactory;
+            _apiSettings = apiSettings.Value;
         }
 
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url+$"Products/ProductListWithCategory");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl+$"Products/ProductListWithCategory");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -33,7 +34,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> CreateProduct()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url+ "Categories");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl+ "Categories");
             var jsonData = await responseMessage.Content.ReadAsStringAsync();
             var values = JsonConvert.DeserializeObject<List<ResultCategoryDto>>(jsonData);
             List<SelectListItem> categoryValues = (from x in values.ToList()
@@ -54,7 +55,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> ProductDealOfTheDayChangeToFalse(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url + $"Products/ProductDealOfTheDayChangeToFalse/{id}");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + $"Products/ProductDealOfTheDayChangeToFalse/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Product");
@@ -64,7 +65,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> ProductDealOfTheDayChangeToTrue(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url + $"Products/ProductDealOfTheDayChangeToTrue/{id}");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + $"Products/ProductDealOfTheDayChangeToTrue/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index", "Product");

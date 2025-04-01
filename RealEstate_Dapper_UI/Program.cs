@@ -1,5 +1,6 @@
 using System.IdentityModel.Tokens.Jwt;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using RealEstate_Dapper_UI.Models;
 using RealEstate_Dapper_UI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +8,7 @@ JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Remove("sub");
 // Add services to the container.
 builder.Services.AddHttpClient();
 builder.Services.AddControllersWithViews();
+builder.Services.Configure<ApiSettings>(builder.Configuration.GetSection("ApiSettings"));
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCookie(JwtBearerDefaults.AuthenticationScheme, opt =>
 {
     opt.LoginPath = "/Login/Index";
@@ -16,7 +18,6 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddCo
     opt.Cookie.SameSite = SameSiteMode.Strict;
     opt.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
     opt.Cookie.Name = "RealEstateJwt";
-
 });
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<ILoginService,LoginService>();
@@ -37,15 +38,39 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(
+        name: "property",
+        pattern: "property/{slug}/{id}",
+        defaults: new { controller = "Property", action = "PropertySingle" });
+
+    endpoints.MapControllerRoute(
         name: "default",
-        pattern: "{controller=Login}/{action=Index}/{id?}");
+        pattern: "{controller=Default}/{action=Index}/{id?}");
 
     endpoints.MapControllerRoute(
         name: "areas",
-        pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}",
-        constraints: new { area = "EstateAgent" });
+        pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
 });
+
+
+
+
+
+
+
+
+// app.UseEndpoints(endpoints =>
+// {
+//     endpoints.MapControllerRoute(
+//         name: "default",
+//         pattern: "{controller=Default}/{action=Index}/{id?}");
+//
+//     endpoints.MapControllerRoute(
+//         name: "areas",
+//         pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}",
+//         constraints: new { area = "EstateAgent" });
+// });
 app.Run();

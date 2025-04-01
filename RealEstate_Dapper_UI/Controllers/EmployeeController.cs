@@ -3,8 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.EmployeeDtos;
 using RealEstate_Dapper_UI.Services;
-using RealEstate_Dapper_UI.StaticValues;
 using System.Text;
+using Microsoft.Extensions.Options;
+using RealEstate_Dapper_UI.Models;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
@@ -13,10 +14,12 @@ namespace RealEstate_Dapper_UI.Controllers
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly ILoginService _loginService;
-        public EmployeeController(IHttpClientFactory httpClientFactory, ILoginService loginService)
+        private readonly ApiSettings _apiSettings;
+        public EmployeeController(IHttpClientFactory httpClientFactory, ILoginService loginService,IOptions<ApiSettings> apiSettings)
         {
             _httpClientFactory = httpClientFactory;
             _loginService = loginService;
+            _apiSettings = apiSettings.Value;
         }
 
         public async Task<IActionResult> Index()
@@ -28,7 +31,7 @@ namespace RealEstate_Dapper_UI.Controllers
             if (token is not null)
             {
                 var client = _httpClientFactory.CreateClient();
-                var responseMessage = await client.GetAsync(PublicValues.Url + "Employee");
+                var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + "Employee");
                 if (responseMessage.IsSuccessStatusCode)
                 {
                     var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -50,7 +53,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createEmployeeDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync(PublicValues.Url + "Employee", stringContent);
+            var responseMessage = await client.PostAsync(_apiSettings.BaseUrl + "Employee", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -60,7 +63,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responsMessage = await client.DeleteAsync(PublicValues.Url + $"Employee/{id}");
+            var responsMessage = await client.DeleteAsync(_apiSettings.BaseUrl + $"Employee/{id}");
             if (responsMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -71,7 +74,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> UpdateEmployee(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url + $"Employee/{id}");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + $"Employee/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonDate = await responseMessage.Content.ReadAsStringAsync();
@@ -86,7 +89,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updateEmployeeDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync(PublicValues.Url + "Employee", stringContent);
+            var responseMessage = await client.PutAsync(_apiSettings.BaseUrl + "Employee", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

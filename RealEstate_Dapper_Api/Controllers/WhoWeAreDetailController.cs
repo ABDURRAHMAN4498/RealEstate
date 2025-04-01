@@ -1,12 +1,6 @@
-﻿using Dapper;
-using Microsoft.AspNetCore.Mvc;
-using RealEstate_Dapper_Api.Dtos.WhoWeAreDtos;
-using RealEstate_Dapper_Api.Dtos;
-using RealEstate_Dapper_Api.Models.DapperContext;
+﻿using Microsoft.AspNetCore.Mvc;
 using RealEstate_Dapper_Api.Dtos.WhoWeAreDtos;
 using RealEstate_Dapper_Api.Repositories.WhoWeAreRepository;
-using RealEstate_Dapper_Api.Dtos.CategoryDtos;
-
 namespace RealEstate_Dapper_Api.Controllers
 {
     [Route("api/[controller]")]
@@ -28,19 +22,19 @@ namespace RealEstate_Dapper_Api.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateWhoWeAreDetail(CreateWhoWeAreDetailDto whoWeAreDetailDto)
         {
-            _whoWeAreRepository.CreateWhoWeAreDetail(whoWeAreDetailDto);
+            await _whoWeAreRepository.CreateWhoWeAreDetail(whoWeAreDetailDto);
             return Ok("seccessfuly");
         }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteWhoWeAreDetail(int id)
         {
-            _whoWeAreRepository.DeleteWhoWeAreDetail(id);
+            await _whoWeAreRepository.DeleteWhoWeAreDetail(id);
             return Ok("Deleting successful");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
         {
-            _whoWeAreRepository.UpdateWhoWeAreDetail(updateWhoWeAreDetailDto);
+            await _whoWeAreRepository.UpdateWhoWeAreDetail(updateWhoWeAreDetailDto);
             return Ok("Updating is successful");
         }
         [HttpGet("{id}")]

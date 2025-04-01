@@ -26,15 +26,15 @@ namespace RealEstate_Dapper_Api.Controllers
             return Ok("seccessfuly");
         }
         [HttpDelete("{id}")]
-        public IActionResult DeleteService(int id)
+        public async Task<IActionResult> DeleteService(int id)
         {
-            _serviceRepository.DeleteService(id);
+            await _serviceRepository.DeleteService(id);
             return Ok("Deleting successful");
         }
         [HttpPut]
         public async Task<IActionResult> UpdateService(UpdateServiceDto updateServiceDto)
         {
-            _serviceRepository.UpdateService(updateServiceDto);
+            await _serviceRepository.UpdateService(updateServiceDto);
             return Ok("Updating is successful");
         }
         [HttpGet("{id}")]

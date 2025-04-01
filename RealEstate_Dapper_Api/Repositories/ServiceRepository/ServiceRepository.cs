@@ -13,21 +13,21 @@ namespace RealEstate_Dapper_Api.Repositories.ServiceRepository
             _context = context;
         }
 
-        public void CreateService(CreateServiceDto createServiceDto)
+        public async Task CreateService(CreateServiceDto createServiceDto)
         {
             string query = $"insert into Service (ServiceName,ServiceStatus) values ('{createServiceDto.ServiceName}','{createServiceDto.ServiceStatus}')";
             using (var connection = _context.CreaConnection())
             {
-                 connection.Execute(query);
+                 await connection.ExecuteAsync(query);
             }
         }
 
-        public void DeleteService(int id)
+        public async Task DeleteService(int id)
         {
             string query = $"Delete From Service Where ServiceId={id}";
             using (var connection = _context.CreaConnection())
             {
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
 
@@ -47,16 +47,14 @@ namespace RealEstate_Dapper_Api.Repositories.ServiceRepository
                 var value = await connection.QueryFirstOrDefaultAsync<GetByIdServiceDto>(query);
                 return value;
             }
-
         }
 
-        public async void UpdateService(UpdateServiceDto updateServiceDto)
+        public async Task UpdateService(UpdateServiceDto updateServiceDto)
         {
             string query = $"Update Service Set ServiceName='{updateServiceDto.ServiceName}',ServiceStatus='{updateServiceDto.ServiceStatus}' where ServiceId={updateServiceDto.ServiceId};";
             using (var connection = _context.CreaConnection())
             {
                 await connection.ExecuteAsync(query);
-
             }
         }
     }

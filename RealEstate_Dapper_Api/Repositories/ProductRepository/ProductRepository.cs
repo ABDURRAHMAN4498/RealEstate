@@ -66,7 +66,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
 
         public async Task<List<ResultProductWithCategoryDto>> GetAllProductWithCategoryAsync()
         {
-            string query = "select ProductId,Title,Price,City,District,CategoryName, Type, CoverImage, Address, DealOfTheDay from Product inner join Category on Product.ProductCategory=Category.CategoryId;";
+            string query = "select ProductId,Title,Price,City,District,CategoryName, Type, CoverImage, Address, DealOfTheDay, SlugUrl from Product inner join Category on Product.ProductCategory=Category.CategoryId;";
             using (var connection = _context.CreaConnection()){
                 var values =await connection.QueryAsync<ResultProductWithCategoryDto>(query);
                 return values.ToList();
@@ -105,7 +105,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
 
         public async Task<GetProductByProductIdDto> GetProductByProductId(int id)
         {
-            string query = $"select ProductId,Title,Price,City,District,CategoryName, Type, CoverImage, Address, DealOfTheDay,AdvertisementDate,Description from Product inner join Category on Product.ProductCategory=Category.CategoryId WHERE ProductId = {id};";
+            string query = $"select ProductId,Title,Price,City,District,CategoryName, Type, CoverImage, Address, DealOfTheDay,AdvertisementDate,Description, SlugUrl, AppUserId from Product inner join Category on Product.ProductCategory=Category.CategoryId WHERE ProductId = {id};";
             using (var connection = _context.CreaConnection()){
                 var values =await connection.QueryFirstOrDefaultAsync<GetProductByProductIdDto>(query);
                 return values;
@@ -135,7 +135,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         {
             string query = $"Update Product set DealOfTheDay='False' Where ProductId = {id}";
             using(var connection = _context.CreaConnection()){
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
             
         }
@@ -144,7 +144,7 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
         {
             string query = $"Update Product set DealOfTheDay='True' Where ProductId = {id}";
             using(var connection = _context.CreaConnection()){
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
 
@@ -164,6 +164,15 @@ namespace RealEstate_Dapper_Api.Repositories.ProductRepository
                 var values = await connection.QueryAsync<ResultProductWithCategoryDto>(query);
                 return values.ToList(); 
             } 
+        }
+
+        public async Task<List<ResultLast3ProductWithCategoryDto>> GetLast3ProductAsync()
+        {
+            string query = "SELECT TOP (3) ProductId, CoverImage, Title,Price,City,District,ProductCategory,CategoryName,AdvertisementDate, Description FROM Product Inner Join Category on Product.ProductCategory = Category.CategoryId where Type='Kiralik' Order by ProductId desc";
+            using(var connection = _context.CreaConnection()){
+                var values = await connection.QueryAsync<ResultLast3ProductWithCategoryDto>(query);
+                return values.ToList();
+            }
         }
     }
 }

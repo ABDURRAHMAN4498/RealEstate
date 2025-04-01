@@ -14,7 +14,7 @@ namespace RealEstate_Dapper_Api.Repositories.EmployeeRepositories
             _context = context;
         }
 
-        public async void CreateEmployee(CreateEmployeeDto createEmployeeDto)
+        public async Task CreateEmployee(CreateEmployeeDto createEmployeeDto)
         {
             string query = $"insert into Employee " +
             "(Name,Title,Mail,PhoneNumber,ImageUrl,Status) " +
@@ -26,7 +26,7 @@ namespace RealEstate_Dapper_Api.Repositories.EmployeeRepositories
             }
         }
 
-        public async void DeleteEmployee(int id)
+        public async Task DeleteEmployee(int id)
         {
             string query = $"Delete From Employee Where EmployeeId={id};";
             using (var connection = _context.CreaConnection())
@@ -56,7 +56,7 @@ namespace RealEstate_Dapper_Api.Repositories.EmployeeRepositories
             }
         }
 
-        public async void UpdateEmployeeDto(UpdateEmployeeDto updateEmployeeDto)
+        public async Task UpdateEmployeeDto(UpdateEmployeeDto updateEmployeeDto)
         {
             string query = $"Update Employee Set Name ='{updateEmployeeDto.Name}',Title='{updateEmployeeDto.Title}', Mail='{updateEmployeeDto.Mail}',PhoneNumber='{updateEmployeeDto.PhoneNumber}',ImageUrl='{updateEmployeeDto.ImageUrl}',Status='{updateEmployeeDto.Status}' Where EmployeeId={updateEmployeeDto.EmployeeId}";
             using (var connection = _context.CreaConnection())

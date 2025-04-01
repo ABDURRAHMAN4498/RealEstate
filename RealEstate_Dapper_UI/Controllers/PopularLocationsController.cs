@@ -1,24 +1,26 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.PopularLocationDtos;
-using RealEstate_Dapper_UI.StaticValues;
 using System.Text;
+using Microsoft.Extensions.Options;
+using RealEstate_Dapper_UI.Models;
 
 namespace RealEstate_Dapper_UI.Controllers
 {
     public class PopularLocationsController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public PopularLocationsController(IHttpClientFactory httpClientFactory)
+        private readonly ApiSettings _apiSettings;
+        public PopularLocationsController(IHttpClientFactory httpClientFactory,IOptions<ApiSettings> apiSettings)
         {
             _httpClientFactory = httpClientFactory;
+            _apiSettings = apiSettings.Value;
         }
 
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url + "PopularLocations");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + "PopularLocations");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -38,7 +40,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createPopularLocationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PostAsync(PublicValues.Url + "PopularLocations", stringContent);
+            var responseMessage = await client.PostAsync(_apiSettings.BaseUrl + "PopularLocations", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -48,7 +50,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> DeletePopularLocation(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responsMessage = await client.DeleteAsync(PublicValues.Url + $"PopularLocations/{id}");
+            var responsMessage = await client.DeleteAsync(_apiSettings.BaseUrl + $"PopularLocations/{id}");
             if (responsMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
@@ -59,7 +61,7 @@ namespace RealEstate_Dapper_UI.Controllers
         public async Task<IActionResult> UpdatePopularLocation(int id)
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync(PublicValues.Url + $"PopularLocations/{id}");
+            var responseMessage = await client.GetAsync(_apiSettings.BaseUrl + $"PopularLocations/{id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonDate = await responseMessage.Content.ReadAsStringAsync();
@@ -73,7 +75,7 @@ namespace RealEstate_Dapper_UI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(updatePopularLocationDto);
             StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync(PublicValues.Url + "PopularLocations", stringContent);
+            var responseMessage = await client.PutAsync(_apiSettings.BaseUrl + "PopularLocations", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

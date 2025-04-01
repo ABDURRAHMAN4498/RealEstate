@@ -13,21 +13,21 @@ namespace RealEstate_Dapper_Api.Repositories.BottomGridRepository
             _context = context;
         }
 
-        public void CreateBottomGrid(CreateBottomGridDto createBottomGridDto)
+        public async Task CreateBottomGrid(CreateBottomGridDto createBottomGridDto)
         {
             string query = $"insert into BottomGrid (Icon,Title,Description) values ('{createBottomGridDto.Icon}','{createBottomGridDto.Title}','{createBottomGridDto.Description}');";
             using (var connection = _context.CreaConnection())
             {
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
 
-        public void DeleteBottomGrid(int id)
+        public async Task DeleteBottomGrid(int id)
         {
             string query = $"delete from BottomGrid where BottomGridId={id}";
             using (var connection = _context.CreaConnection())
             {
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
 
@@ -50,11 +50,11 @@ namespace RealEstate_Dapper_Api.Repositories.BottomGridRepository
             }
         }
 
-        public void UpdateBottomGrid(UpdateBottomGridDto updateBottomGridDto)
+        public async Task UpdateBottomGrid(UpdateBottomGridDto updateBottomGridDto)
         {
             string query = $"Update BottomGrid set Icon='{updateBottomGridDto.Icon}',Title='{updateBottomGridDto.Title}',Description='{updateBottomGridDto.Description}'  where BottomGridId={updateBottomGridDto.BottomGridId}";
             using(var connection = _context.CreaConnection()){
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
     }

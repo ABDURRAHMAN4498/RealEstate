@@ -34,7 +34,7 @@ namespace RealEstate_Dapper_Api.Repositories.EstateAgentRepositories.DashboardRe
 
         public int ProductCountByStatusFalse(int id)
         {
-            string query = $"select count(*) from Product where EmplooyeId={id} and ProductStatus=0;";
+            string query = $"select count(*) from Product where AppUserId={id} and ProductStatus=0;";
             using (var connection = _context.CreaConnection())
             {
                 var value = connection.QueryFirstOrDefault<int>(query);

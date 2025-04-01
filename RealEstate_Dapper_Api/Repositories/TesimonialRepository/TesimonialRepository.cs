@@ -13,12 +13,12 @@ namespace RealEstate_Dapper_Api.Repositories.TesimonialRepository
             _context = context;
         }
 
-        public void CreateTestimonial(CreateTestimonialDto createTestimonialDto)
+        public async Task CreateTestimonial(CreateTestimonialDto createTestimonialDto)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteTestimonial(int id)
+        public async Task DeleteTestimonial(int id)
         {
             throw new NotImplementedException();
         }
@@ -37,7 +37,7 @@ namespace RealEstate_Dapper_Api.Repositories.TesimonialRepository
             throw new NotImplementedException();
         }
 
-        public void UpdateTestimonial(UpdateTesimonialDto updateTesimonialDto)
+        public async Task UpdateTestimonial(UpdateTesimonialDto updateTesimonialDto)
         {
             throw new NotImplementedException();
         }

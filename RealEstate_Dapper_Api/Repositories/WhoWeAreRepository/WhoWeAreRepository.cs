@@ -13,7 +13,7 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
             _context = context;
         }
 
-        public async void CreateWhoWeAreDetail(CreateWhoWeAreDetailDto createWhoWeAreDetailDto)
+        public async Task CreateWhoWeAreDetail(CreateWhoWeAreDetailDto createWhoWeAreDetailDto)
         {
             string query = $"insert into WhoWeAreDetail (Title,SubTitle,Description1,Description2) " +
                 $"values(" +
@@ -27,7 +27,7 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
             }
         }
 
-        public async void DeleteWhoWeAreDetail(int id)
+        public async Task DeleteWhoWeAreDetail(int id)
         {
             string query = $"delete from WhoWeAreDetail where WhoWeAreDetailId={id}";
             using (var connection = _context.CreaConnection())
@@ -56,7 +56,7 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
             }
         }
 
-        public void UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
+        public async Task UpdateWhoWeAreDetail(UpdateWhoWeAreDetailDto updateWhoWeAreDetailDto)
         {
             string query = $"update WhoWeAreDetail set " +
                 $"Title='{updateWhoWeAreDetailDto.Title}'," +
@@ -66,7 +66,7 @@ namespace RealEstate_Dapper_Api.Repositories.WhoWeAreRepository
                 $"where WhoWeAreDetailId={updateWhoWeAreDetailDto.WhoWeAreDetailId};";
             using (var connection = _context.CreaConnection())
             {
-                var values = connection.Execute(query);
+                var values = await connection.ExecuteAsync(query);
                
             }
         }

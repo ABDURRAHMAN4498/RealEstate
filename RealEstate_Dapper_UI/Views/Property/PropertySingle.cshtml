@@ -3,17 +3,11 @@
     ViewBag.Title = "PropertySingle";
     Layout = "~/Views/Shared/_DefaultLayout.cshtml";
 }
-
-@* <section class="w3l-about-breadcrumb"> *@
-@* <div class="breadcrumb-bg breadcrumb-bg-about pt-5"> *@
-@*     <div class="container pt-lg-5 py-3"> *@
-@*     </div> *@
-@* </div> *@
 @* </section> *@
 <section class="w3l-breadcrumb">
     <div class="container">
         <ul class="breadcrumbs-custom-path">
-            <li><a asp-controller="Home" asp-action="Index">Ana Sayfa</a></li>
+            <li><a asp-controller="Default" asp-action="Index">Ana Sayfa</a></li>
             <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> İlanlar</li>
             <li class="active"><span class="fa fa-angle-right mx-2" aria-hidden="true"></span> property single</li>
         </ul>
@@ -46,73 +40,76 @@
                 <li><span class="fa fa-share-square-o"></span> @Model.ProductDetail.ProductSize (m²)</li>
             </ul>
             <ul class="share-post">
-                <a href="#url" class="cost-estate m-o">@Model.Product.price.ToString("c")</a>
+                <a href="#" class="cost-estate m-o">@Model.Product.price.ToString("c")</a>
             </ul>
         </div>
         <div class="row">
             <div class="col-lg-8 w3l-news">
                 <div class="blog-single-post">
-                    <div class="single-post-image mb-5">
-                        <div class="owl-blog owl-carousel owl-theme">
-                            @foreach (var image in Model.ProductImage)
-                            {
-                                <div class="item">
-                                    <div class="card">
-                                        <img src="@image.imageUrl" style="height: 500px;" class="img-fluid radius-image"
-                                             alt="@image.productId">
+                    <a>
+                        <div class="single-post-image mb-5">
+                            <div class="owl-blog owl-carousel owl-theme">
+                                @foreach (var image in Model.ProductImage)
+                                {
+                                    <div class="item">
+                                        <div class="card">
+                                            <img src="@image.imageUrl" style="height: 500px;"
+                                                 class="img-fluid radius-image" alt="@image.productId">
+                                        </div>
                                     </div>
-                                </div>
-                            }
-                        </div>
-                    </div>
-
-                    <div class="single-post-content">
-                        <h3 class="post-content-title mb-3">İlan Açıklaması</h3>
-                        <p class="mb-4">
-                            @Model.Product.description </p>
-                        <div class="single-bg-white">
-                            <h3 class="post-content-title mb-4">İlan Detayları</h3>
-                            <ul class="details-list">
-                                <li><strong>İlan Id :</strong> @Model.Product.productId</li>
-                                <li><strong>(m²) :</strong> @Model.ProductDetail.ProductSize</li>
-                                <li><strong>Rooms :</strong> 2</li>
-                                <li><strong>Yatak Odası :</strong> @Model.ProductDetail.badRoomCount</li>
-                                <li><strong>Banyo :</strong> @Model.ProductDetail.bathRoomCount</li>
-                                <li><strong>Exterior material :</strong> Brick</li>
-                                <li><strong>Yapı Türü :</strong> Beton</li>
-                                <li><strong>Garaj Sayısı :</strong> @Model.ProductDetail.garagSize</li>
-                                <li><strong>Garages :</strong> 15</li>
-                                <li><strong>Fiyat :</strong> @Model.Product.price.ToString("c")</li>
-                                <li><strong>Yapım Yılı :</strong> @Model.ProductDetail.buildYear</li>
-                                <li><strong>İlan Tarihi :</strong> @Model.Product.advertisementDate.ToString("dd-MMM-yyyy")</li>
-                            </ul>
-                        </div>
-                        @* @await Component.InvokeAsync("_PropertyAmenityStatusTrueByPropertyIdComponentPartial") *@
-                        <div class="single-bg-white">
-                            <h3 class="post-content-title mb-4">Amenities</h3>
-                            <ul class="details-list">
-                                @foreach(var item in Model.PropertyAmenity){
-
-                                <li><strong>@item.title</strong></li>
                                 }
-                                
-                            </ul>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="single-bg-white">
-                        <h3 class="post-content-title mb-4">Lokasyon</h3>
-                        <div class="agent-map">
-                            @Html.Raw(Model.ProductDetail.location)
-                        </div>
-                    </div>
+                        <div class="single-post-content">
+                            <h3 class="post-content-title mb-3">İlan Açıklaması</h3>
+                            <p class="mb-4">
+                                @Model.Product.description </p>
+                            <div class="single-bg-white">
+                                <h3 class="post-content-title mb-4">İlan Detayları</h3>
+                                <ul class="details-list">
+                                    <li><strong>İlan Id :</strong> @Model.Product.productId</li>
+                                    <li><strong>(m²) :</strong> @Model.ProductDetail.ProductSize</li>
+                                    <li><strong>Rooms :</strong> 2</li>
+                                    <li><strong>Yatak Odası :</strong> @Model.ProductDetail.badRoomCount</li>
+                                    <li><strong>Banyo :</strong> @Model.ProductDetail.bathRoomCount</li>
+                                    <li><strong>Exterior material :</strong> Brick</li>
+                                    <li><strong>Yapı Türü :</strong> Beton</li>
+                                    <li><strong>Garaj Sayısı :</strong> @Model.ProductDetail.garagSize</li>
+                                    <li><strong>Garages :</strong> 15</li>
+                                    <li><strong>Fiyat :</strong> @Model.Product.price.ToString("c")</li>
+                                    <li><strong>Yapım Yılı :</strong> @Model.ProductDetail.buildYear</li>
+                                    <li><strong>İlan Tarihi
+                                            :</strong> @Model.Product.advertisementDate.ToString("dd-MMM-yyyy")</li>
+                                </ul>
+                            </div>
+                            @* @await Component.InvokeAsync("_PropertyAmenityStatusTrueByPropertyIdComponentPartial") *@
+                            <div class="single-bg-white">
+                                <h3 class="post-content-title mb-4">Amenities</h3>
+                                <ul class="details-list">
+                                    @foreach (var item in Model.PropertyAmenity)
+                                    {
+                                        <li><strong>@item.title</strong></li>
+                                    }
 
-                    <div class="single-bg-white mb-0">
-                        <h3 class="post-content-title mb-4">Video</h3>
-                        <div class="post-content">
-                            @Html.Raw(Model.ProductDetail.videoUrl)
+                                </ul>
+                            </div>
                         </div>
-                    </div>
+
+                        <div class="single-bg-white">
+                            <h3 class="post-content-title mb-4">Lokasyon</h3>
+                            <div class="agent-map">
+                                @Html.Raw(Model.ProductDetail.location)
+                            </div>
+                        </div>
+
+                        <div class="single-bg-white mb-0">
+                            <h3 class="post-content-title mb-4">Video</h3>
+                            <div class="post-content">
+                                @Html.Raw(Model.ProductDetail.videoUrl)
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="sidebar-side col-lg-4 col-md-12 col-sm-12 mt-lg-0 mt-5">
@@ -124,14 +121,16 @@
                             <h4>Emlakçı İletişim Bilgileri</h4>
                         </div>
                         <article class="post">
-                            <figure class="post-thumb"><img src="@Model.AppUser.UserImageUrl" class="radius-image" alt="">
+                            <figure class="post-thumb"><img src="@Model.AppUser.UserImageUrl" class="radius-image"
+                                                            alt="">
                             </figure>
                             <div class="text mb-0"><a href="#blog-single"> @Model.AppUser.Name</a>
                                 <div class="post-info">@Model.AppUser.PhoneNumber</div>
                                 <div class="post-info">@Model.AppUser.Email</div>
                             </div>
                         </article>
-                        <button type="submit" class="btn btn-primary btn-style w-100">Detaylı İletişim Bilgileri</button>
+                        <button type="submit" class="btn btn-primary btn-style w-100">Detaylı İletişim Bilgileri
+                        </button>
                     </div>
 
 
@@ -165,7 +164,7 @@
                             <figure class="post-thumb"><img src="~/starter/assets/images/l3.jpg" class="radius-image"
                                                             alt="">
                             </figure>
-                            <div class="text"><a href="#blog-single">
+                            <div class="text"><a href="#">
                                     Simply the best. Better than the rest.</a>
                                 <div class="post-info">Sep 10, 2020 - 2 comments</div>
                             </div>

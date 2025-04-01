@@ -1,8 +1,9 @@
 using Dapper;
+using RealEstate_Dapper_Api.Dtos.PopularLocationDtos;
 using RealEstate_Dapper_Api.Models.DapperContext;
-using RealEstate_Dapper_Api.Repositories.PopularLocationRepository;
 
-namespace RealEstate_Dapper_Api.Dtos.PopularLocationDtos
+
+namespace RealEstate_Dapper_Api.Repositories.PopularLocationRepository
 {
     public class PopularLocationRepository : IPopularLocationRepository
     {
@@ -13,18 +14,18 @@ namespace RealEstate_Dapper_Api.Dtos.PopularLocationDtos
             _context = context;
         }
 
-        public async void CreatePopularLocation(CreatePopularLocationDto createPopularLocationDto)
+        public async Task CreatePopularLocation(CreatePopularLocationDto createPopularLocationDto)
         {
             string query = $"insert into PopularLocation (CityName,ImageUrl) values ('{createPopularLocationDto.CityName}','{createPopularLocationDto.ImageUrl}')";
             using(var connection = _context.CreaConnection()){
                 await connection.ExecuteAsync(query);
             }
         }
-        public void DeletePopularLocation(int id)
+        public async Task DeletePopularLocation(int id)
         {
             string query = $"delete from PopularLocation where LocationId = {id}";
             using(var connection = _context.CreaConnection()){
-                connection.Execute(query);
+                await connection.ExecuteAsync(query);
             }
         }
         public async Task<List<ResultPopularLocationDto>> GatAllPopularLocationAsync()
@@ -45,11 +46,11 @@ namespace RealEstate_Dapper_Api.Dtos.PopularLocationDtos
             }
         }
 
-        public void UpdatePopularLocation(UpdatePopularLocationDto updatePopularLocationDto)
+        public async Task UpdatePopularLocation(UpdatePopularLocationDto updatePopularLocationDto)
         {
             string query = $"update PopularLocation set CityName='{updatePopularLocationDto.CityName}',ImageUrl='{updatePopularLocationDto.ImageUrl}' where LocationId={updatePopularLocationDto.LocationId}";
             using(var connection = _context.CreaConnection()){
-                connection.Execute(query);
+               await connection.ExecuteAsync(query);
             }
         }
     }

@@ -3,22 +3,23 @@ using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using RealEstate_Dapper_UI.Dtos.ToDoListDtos;
-using RealEstate_Dapper_UI.StaticValues;
+using RealEstate_Dapper_UI.Models;
 
 namespace RealEstate_Dapper_UI.ViewComponents.Dashboard
 {
     public class _DashboardToDoListComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public _DashboardToDoListComponentPartial(IHttpClientFactory httpClientFactory)
+        private readonly ApiSettings _apiSettings;
+        public _DashboardToDoListComponentPartial(IHttpClientFactory httpClientFactory, ApiSettings apiSettings)
         {
             _httpClientFactory = httpClientFactory;
+            _apiSettings = apiSettings;
         }
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var resposeMessage = await client.GetAsync(PublicValues.Url+"ToDoLists/ToDoListList");
+            var resposeMessage = await client.GetAsync(_apiSettings.BaseUrl+"ToDoLists/ToDoListList");
             if (resposeMessage.IsSuccessStatusCode)
             {
                 var jsonData = await resposeMessage.Content.ReadAsStringAsync();

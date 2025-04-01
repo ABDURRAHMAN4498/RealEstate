@@ -15,4 +15,5 @@ public class SinglePropertyVM
     public List<ResultPropertyAmenityByStatusTrueDto>? PropertyAmenity { get; set; }
     public  int Month { get; set; }
     public int Day { get; set; }
+    public string  SlugUrl { get; set; }
 }

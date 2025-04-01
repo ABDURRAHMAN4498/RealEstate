@@ -16,6 +16,7 @@ public class AppUserController : ControllerBase
     [HttpGet("GetAppUserByProductId")]
     public async Task<IActionResult> GetAppUserByProductId(int id)
     {
+        
         var value = await _appUserRepository.GetAppUserByProductId(id);
         return Ok(value);
     }

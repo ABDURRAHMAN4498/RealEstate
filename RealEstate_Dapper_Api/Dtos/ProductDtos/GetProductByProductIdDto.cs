@@ -14,5 +14,7 @@ namespace RealEstate_Dapper_Api.Dtos.ProductDtos
         public bool DealOfTheDay { get; set; }
         public string Description { get; set; }
         public string AdvertisementDate { get; set; }
+        public string SlugUrl { get; set; }
+        public int AppUserId { get; set; }
     }
 }

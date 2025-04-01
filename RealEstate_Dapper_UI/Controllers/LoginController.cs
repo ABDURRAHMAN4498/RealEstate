@@ -5,20 +5,19 @@ using System.Text.Json;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Extensions.Options;
 using RealEstate_Dapper_UI.Dtos.LoginDtos;
 using RealEstate_Dapper_UI.Models;
-using RealEstate_Dapper_UI.StaticValues;
-
 namespace RealEstate_Dapper_UI.Controllers
 {
     public class LoginController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-
-        public LoginController(IHttpClientFactory httpClientFactory)
+        private readonly ApiSettings _apiSettings;
+        public LoginController(IHttpClientFactory httpClientFactory,IOptions<ApiSettings> apiSettings)
         {
             _httpClientFactory = httpClientFactory;
+            _apiSettings = apiSettings.Value;
         }
 
         [HttpGet]
@@ -31,7 +30,7 @@ namespace RealEstate_Dapper_UI.Controllers
         {
             var client = _httpClientFactory.CreateClient();
             var content = new StringContent(JsonSerializer.Serialize(createLoginDto), Encoding.UTF8, "application/json");
-            var response = await client.PostAsync(PublicValues.Url + "Login/SignIn", content);
+            var response = await client.PostAsync(_apiSettings.BaseUrl + "Login/SignIn", content);
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
